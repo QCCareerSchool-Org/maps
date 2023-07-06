@@ -1,6 +1,6 @@
-import Prisma, { PrismaClient } from '@prisma/client';
+import { Prisma, PrismaClient } from '@prisma/client';
 
-const log: Prisma.Prisma.LogLevel[] = process.env.NODE_ENV !== 'production'
+const log: Prisma.LogLevel[] = process.env.NODE_ENV !== 'production'
   ? [ 'query', 'info', 'warn', 'error' ]
   : [];
 
