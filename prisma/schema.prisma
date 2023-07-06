@@ -8,9 +8,9 @@ datasource db {
 }
 
 model StoredMaps {
-  location String   @id @db.VarChar(255)
-  expires  DateTime @db.DateTime(0)
-  filename Bytes    @db.Binary(16)
+  location        String   @id @db.VarChar(255)
+  expires         DateTime @db.DateTime(3)
+  filename        Bytes    @db.Binary(16)
 
   @@map("stored_maps")
 }

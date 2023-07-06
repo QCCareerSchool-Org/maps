@@ -1,6 +1,7 @@
 import { promises as fs } from 'fs';
-
 import path from 'path';
+import fetch from 'node-fetch';
+
 import config from './config';
 import { fixPrismaReadDate, fixPrismaWriteDate } from './date';
 import { logError } from './logger';
