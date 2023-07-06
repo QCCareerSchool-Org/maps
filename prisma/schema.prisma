@@ -1,0 +1,16 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model StoredMaps {
+  location String   @id @db.VarChar(255)
+  expires  DateTime @db.DateTime(0)
+  filename Bytes    @db.Binary(16)
+
+  @@map("stored_maps")
+}
